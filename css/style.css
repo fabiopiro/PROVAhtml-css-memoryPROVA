@@ -1,0 +1,82 @@
+/* reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* clearfix */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* layout */
+.layout {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+/* debug */
+header {
+    height: 100px;
+    background-color: aqua;
+    text-transform: uppercase;
+}
+
+main {
+    background-color: aquamarine;
+}
+
+footer {
+    height: 100px;
+    background-color: burlywood;
+}
+
+/* main */
+.row {
+    margin-bottom: 20px;
+}
+
+.card {
+    position: relative;
+    float: left;
+    width: calc(25% - 20px);
+    margin: 0 10px;
+    background-color: white;
+    background-image: url(../img/pattern.png);
+    background-size: contain;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card img {
+    visibility: hidden;
+    width: 100%;
+}
+.card h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    color: magenta;
+}
+/* card active */
+/* visible hidden */
+/* comma selector & hover */
+
+.card.active img,
+.card:hover img {
+    visibility: visible;
+}
+.card.active h3,
+.card:hover h3 {
+    visibility: visible;
+}
+.card:hover h3 {
+    color: orange;
+}
+.card.active,
+.card:hover {
+    background-image: none;
+}
